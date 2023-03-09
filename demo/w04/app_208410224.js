@@ -86,12 +86,12 @@ const displayMenuItems  = (menu) => {
 const displayFilterBtn = (category) => {
     let btn = category.map((item) => {
         return`
-        <button type="button" class="filter-btn" data-id="all">${item}</button>
+        <button type="button" class="filter-btn" data-id="${item}">${item}</button>
         `
     })
-    // console.log('btn',btn)
+    console.log('btn',btn)
     btn = btn.join('')
-    // console.log('btn after join',btn)
+    console.log('btn after join',btn)
     btnContainer.innerHTML = btn
 }
 const menuFilter = (cat) => {
