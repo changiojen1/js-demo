@@ -29,7 +29,7 @@ const menu = [
     {
         id: 4,
         title:'buttermilk pancakes',
-        category: 'breakfast',
+        category: 'dessert',
         price: 15.99,
         img: './images/item-1.jpeg',
         remote_img: '',
@@ -55,11 +55,14 @@ const menu = [
         desc: "A dessert lover's dream come true, with creamy ice cream, candy bits, cookie crumbs, whipped cream, and a cherry on top, all blended to perfection.",
     },
 ]
+// const category = ['all','breakfast','lunch','dinner','shakes']
+const category = ['all',...new Set(menu.map((item) => item.category))]
 const btnContainer = document.querySelector('.btn-container')
 const sectionCenter = document.querySelector('.section-center')
+let btnFilter
 
 const displayMenuItems  = (menu) => {
-    let displayMenu = menu.map( (item) => {
+    let displayMenu = menu.map((item) => {
         return `
         <article class="menu-item">
           <img src="${item.img}" alt="menu item" class="photo" />
@@ -75,17 +78,46 @@ const displayMenuItems  = (menu) => {
         </article>
         `
     })
-    console.log('displayMenu',displayMenu)
+    // console.log('displayMenu',displayMenu)
     displayMenu = displayMenu.join('')
-    console.log('displayMenu after join',displayMenu)
+    // console.log('displayMenu after join',displayMenu)
     sectionCenter.innerHTML = displayMenu
 }
-// const btnList = ['all','breakfast','lunch','dinner','shakes']
-// const displayFilterBtn = (btn) => {
-    
-// }
+const displayFilterBtn = (category) => {
+    let btn = category.map((item) => {
+        return`
+        <button type="button" class="filter-btn" data-id="all">${item}</button>
+        `
+    })
+    // console.log('btn',btn)
+    btn = btn.join('')
+    // console.log('btn after join',btn)
+    btnContainer.innerHTML = btn
+}
+const menuFilter = (cat) => {
+    let filteredMenu = []
+    if (cat === 'all') {
+        filteredMenu = menu
+        displayMenuItems(filteredMenu)
+    }else{
+        menu.map((item) => {
+            if (item.category.includes(cat)) {
+                filteredMenu.push(item)
+            }
+        })
+        displayMenuItems(filteredMenu)
+    }
+}
 
 window.addEventListener('DOMContentLoaded',() => {
     displayMenuItems(menu)
-
+    displayFilterBtn(category)
+    btnFilter = document.querySelectorAll('.filter-btn')
+    // console.log(btnFilter.innerHTML);
+    btnFilter.forEach(item => {
+        item.addEventListener('click',() => {
+            // console.log('123')
+            menuFilter(item.innerHTML)
+        })
+    });
 })
