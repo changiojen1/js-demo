@@ -5,13 +5,6 @@ const addBtn = document.querySelector('#btn-add')
 const subtractBtn = document.querySelector('#btn-subtract')
 const multiplyBtn = document.querySelector('#btn-multiply')
 const divideBtn = document.querySelector('#btn-divide')
-// console.log(input)
-// console.log(calculation)
-// console.log(result)
-// console.log(addBtn)
-// console.log(subtractBtn)
-// console.log(multiplyBtn)
-// console.log(divideBtn)
 
 const defaultRes = 0
 let resultVal = defaultRes
