@@ -4,7 +4,7 @@ import { menu } from './data.js'
 const category = ['all',...new Set(menu.map((item) => item.category))]
 const btnContainer = document.querySelector('.btn-container')
 const sectionCenter = document.querySelector('.section-center')
-let btnFilter
+// let btnFilter
 
 const displayMenuItems  = (menu) => {
     let displayMenu = menu.map((item) => {
@@ -34,22 +34,26 @@ const displayFilterBtn = (category) => {
         <button type="button" class="filter-btn" data-id="${item}">${item}</button>
         `
     })
-    console.log('btn',btn)
+    // console.log('btn',btn)
     btn = btn.join('')
-    console.log('btn after join',btn)
+    // console.log('btn after join',btn)
     btnContainer.innerHTML = btn
+
+    const btnFilter = document.querySelectorAll('.filter-btn')
+    console.log('filterBtns',btnFilter);
+    btnFilter.forEach(item => {
+        item.addEventListener('click',(e) => {
+            menuFilter(e.currentTarget.dataset.id)
+        })
+    });
 }
 const menuFilter = (cat) => {
-    let filteredMenu = []
+    let filteredMenu = menu.filter((item) => item.category === cat)
     if (cat === 'all') {
-        filteredMenu = menu
-        displayMenuItems(filteredMenu)
+        console.log('all',menu);
+        displayMenuItems(menu)
     }else{
-        menu.map((item) => {
-            if (item.category.includes(cat)) {
-                filteredMenu.push(item)
-            }
-        })
+        console.log(cat,filteredMenu);
         displayMenuItems(filteredMenu)
     }
 }
@@ -57,12 +61,4 @@ const menuFilter = (cat) => {
 window.addEventListener('DOMContentLoaded',() => {
     displayMenuItems(menu)
     displayFilterBtn(category)
-    btnFilter = document.querySelectorAll('.filter-btn')
-    // console.log(btnFilter.innerHTML);
-    btnFilter.forEach(item => {
-        item.addEventListener('click',() => {
-            // console.log('123')
-            menuFilter(item.innerHTML)
-        })
-    });
 })
