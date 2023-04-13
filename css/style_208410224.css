@@ -164,10 +164,9 @@ a{
 /* banner section */
 .banner-section{
   /* background-image: url('../img/banner.jpg'); */
-  background-color:skyblue;
-  background-size: cover;
-  background-position: center;
-  height: 700px;
+  /* background-size: cover;
+  background-position: center; */
+  height: 900px;
   width: 100%;
   display: block;
 }
