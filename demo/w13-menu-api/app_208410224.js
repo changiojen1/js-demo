@@ -3,7 +3,6 @@ const supabaseUrl = "https://ztflbjygdewbkwpghxwx.supabase.co";
 const SUPABASE_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp0ZmxianlnZGV3Ymt3cGdoeHd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc3NTQwODksImV4cCI6MTk5MzMzMDA4OX0.TaTe87HUG_3BYs-WGIOxG31Ghq2zWILRovwmLP2Fn2U";
 
-const category = ["all", "breakfast", "lunch", "dinner", "shakes"];
 const btnContainer = document.querySelector(".btn-container");
 const sectionCenter = document.querySelector(".section-center");
 const url =
@@ -12,7 +11,6 @@ const url =
 let menu;
 let supa = supabase.createClient(supabaseUrl, SUPABASE_KEY);
 console.log("database", supa);
-// const category = ["all", ...new Set(menu.map((item) => item.category))];
 
 const displayMenuItems = (menu) => {
   let displayMenu = menu.map((item) => {
@@ -37,7 +35,8 @@ const displayMenuItems = (menu) => {
   sectionCenter.innerHTML = displayMenu;
 };
 
-const displayFilterBtn = (category) => {
+const displayFilterBtn = () => {
+  const category = ["all", ...new Set(menu.map((item) => item.category))];
   let btn = category.map((item) => {
     return `
         <button type="button" class="filter-btn" data-id="${item}">${item}</button>
@@ -89,5 +88,5 @@ const fetchData = async (url) => {
 window.addEventListener("DOMContentLoaded", async () => {
   menu = await fetchData(url);
   await displayMenuItems(menu);
-  await displayFilterBtn(category);
+  await displayFilterBtn();
 });

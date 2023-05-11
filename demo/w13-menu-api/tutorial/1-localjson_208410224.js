@@ -5,13 +5,12 @@ const btnContainer = document.querySelector(".btn-container");
 const sectionCenter = document.querySelector(".section-center");
 const url = "./api/data.json";
 let menu;
-// const category = ["all", ...new Set(menu.map((item) => item.category))];
 
 const displayMenuItems = (menu) => {
   let displayMenu = menu.map((item) => {
     return `
         <article class="menu-item">
-          <img src="${item.local_img}" alt="menu item" class="photo" />
+          <img src="${item.remote_img}" alt="menu item" class="photo" />
           <div class="item-info">
             <header>
               <h4>${item.title}</h4>
@@ -30,7 +29,8 @@ const displayMenuItems = (menu) => {
   sectionCenter.innerHTML = displayMenu;
 };
 
-const displayFilterBtn = (category) => {
+const displayFilterBtn = () => {
+  const category = ["all", ...new Set(menu.map((item) => item.category))];
   let btn = category.map((item) => {
     return `
         <button type="button" class="filter-btn" data-id="${item}">${item}</button>
@@ -75,5 +75,5 @@ const fetchData = async (url) => {
 window.addEventListener("DOMContentLoaded", async () => {
   menu = await fetchData(url);
   await displayMenuItems(menu);
-  await displayFilterBtn(category);
+  await displayFilterBtn();
 });
