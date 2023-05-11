@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "toasted bread",
+    "category": "breakfast",
+    "price": 12,
+    "local_img": "./images/item-1.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-1.jpeg",
+    "desc": "A simple pleasure elevated to perfection with golden-brown crust, a fluffy interior, and a slather of butter or jam."
+  },
+  {
+    "id": 2,
+    "title": "salad",
+    "category": "lunch",
+    "price": 15,
+    "local_img": "./images/item-2.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-2.jpeg",
+    "desc": "A wholesome bowl of fresh greens, crisp veggies, and protein, topped with a delicious dressing that packs a flavor punch."
+  },
+  {
+    "id": 3,
+    "title": "fried rice",
+    "category": "dinner",
+    "price": 18,
+    "local_img": "./images/item-3.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-3.jpeg",
+    "desc": "A beloved Asian staple of fluffy rice stir-fried with savory meats, veggies, and spices, creating a symphony of textures and flavors."
+  },
+  {
+    "id": 4,
+    "title": "buttermilk pancakes",
+    "category": "dessert",
+    "price": 15.99,
+    "local_img": "./images/item-4.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-4.jpeg",
+    "desc": "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed"
+  },
+  {
+    "id": 5,
+    "title": "dinner double",
+    "category": "dinner",
+    "price": 13.99,
+    "local_img": "./images/item-5.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-5.jpeg",
+    "desc": "A towering feast for burger lovers, featuring two juicy patties, gooey cheese, crispy bacon, and all the classic toppings on a toasted bun."
+  },
+  {
+    "id": 6,
+    "title": "godzilla milkshake",
+    "category": "shakes",
+    "price": 13.99,
+    "local_img": "./images/item-6.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-6.jpeg",
+    "desc": "A dessert lover's dream come true, with creamy ice cream, candy bits, cookie crumbs, whipped cream, and a cherry on top, all blended to perfection."
+  },
+  {
+    "id": 7,
+    "title": "Bacon Overflow",
+    "category": "breakfast",
+    "price": 8.99,
+    "local_img": "./images/item-7.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-7.jpeg",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolores ut iusto quas quia dignissimos ullam. Enim voluptas, expedita"
+  },
+  {
+    "id": 8,
+    "title": "American Classic",
+    "category": "lunch",
+    "price": 12.99,
+    "local_img": "./images/item-8.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-8.jpeg",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolores ut iusto quas quia dignissimos ullam. Enim voluptas, expedita"
+  },
+  {
+    "id": 9,
+    "title": "Quarantine Buddy",
+    "category": "lunch",
+    "price": 13.99,
+    "local_img": "./images/item-9.jpeg",
+    "remote_img": "https://ztflbjygdewbkwpghxwx.supabase.co/storage/v1/object/public/md-img/menu_208410224/item-9.jpeg",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolores ut iusto quas quia dignissimos ullam. Enim voluptas, expedita"
+  }
+]
