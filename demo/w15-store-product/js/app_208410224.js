@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    const company = e.currentTarget.innerHTML;
-    const filterData = productsFilter(company);
+    const companyID = e.currentTarget.dataset.id;
+    const filterData = productsFilter(companyID);
     displayProducts(filterData);
   });
 });

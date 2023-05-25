@@ -43,7 +43,7 @@ const displayProducts = (products) => {
 };
 
 const productsFilter = (company) => {
-  console.log("company", company);
+  console.log("companyID", company);
   const filterData = data.filter((product) => {
     if (product.fields.company === company) {
       return product;
@@ -51,5 +51,6 @@ const productsFilter = (company) => {
       return product;
     }
   });
+  console.log(company, filterData);
   return filterData;
 };
