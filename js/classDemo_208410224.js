@@ -58,5 +58,20 @@ let showClassDemo = (week) => {
     case "w15-md":
       demoSection.innerHTML = `<iframe src = '../demo/md/w15/w15_208410224.html' width="100%" height="100%"/>`;
       break;
+    case "API_208410224":
+      demoSection.innerHTML = `<iframe src = '../demo/md/w18-api-project/api_208410224.html' width="100%" height="100%"/>`;
+      break;
+    case "p1":
+      demoSection.innerHTML = `<iframe src = '../demo/md/w18-api-project/p1.html' width="100%" height="100%"/>`;
+      break;
+    case "p2":
+      demoSection.innerHTML = `<iframe src = '../demo/md/w18-api-project/p2.html' width="100%" height="100%"/>`;
+      break;
+    case "p3":
+      demoSection.innerHTML = `<iframe src = '../demo/md/w18-api-project/p3.html' width="100%" height="100%"/>`;
+      break;
+    case "review":
+      demoSection.innerHTML = `<iframe src = '../demo/md/w18-api-project/review.html' width="100%" height="100%"/>`;
+      break;
   }
 };
